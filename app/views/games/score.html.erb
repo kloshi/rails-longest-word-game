@@ -1,0 +1,16 @@
+<h1>Games#score</h1>
+
+<p>Your score: <%= @score %></p>
+
+<!-- add link to new game -->
+<% if !@valid_word %>
+  <h3>Your word is not valid!</h3>
+<% end %>
+
+<h3>
+  Your score = <%= @score %>
+</h3>
+<p>
+  <%= link_to "Play again!", 'new' %>
+</p>
+

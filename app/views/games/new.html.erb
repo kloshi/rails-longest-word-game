@@ -1,0 +1,22 @@
+<h1>New game:</h1>
+
+<!-- display random letters -->
+<!-- add a form for the user input -->
+<!-- add post to the /score action in the games controller -->
+
+<h3>Here's your letters:</h3>
+<p>
+  <strong>
+    <% @letters.each do |letter| %>
+    <%= letter  %>
+    <% end %>
+  </strong>
+</p>
+
+<form action="/score" method="post">
+  <label for="word">What is the longest word you can find?</label>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="word" placeholder="Longest word?">
+  <input type="submit" value="Play!">
+</form>
+
